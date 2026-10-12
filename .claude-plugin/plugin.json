@@ -1,0 +1,9 @@
+{
+  "name": "usage-bar",
+  "version": "0.1.0",
+  "description": "A styled band above the prompt: model, context fill, 5-hour and weekly limits with reset countdowns, and session cost",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "zohrdan"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "claude-mod-usage",
+  "owner": { "name": "zohrdan" },
+  "plugins": [{ "name": "usage-bar", "source": "./" }]
+}
