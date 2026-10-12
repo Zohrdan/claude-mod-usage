@@ -25,6 +25,25 @@ At the prompt of a Claude Code terminal session:
 
 Answer `y` to add the marketplace, then choose the user scope. With the user scope it also loads in local sessions the desktop app starts.
 
+## No plugins? Use the status-line version
+
+If `/plugin` answers *Plugins aren't available in this environment*, use `statusline/usage-bar.sh` instead. It draws the same meters as Claude Code's status line and needs only `bash` and `jq`.
+
+```
+curl -fsSL https://raw.githubusercontent.com/zohrdan/claude-mod-usage/main/statusline/usage-bar.sh -o ~/.claude/usage-bar.sh
+chmod +x ~/.claude/usage-bar.sh
+```
+
+Then add this to `~/.claude/settings.json`:
+
+```json
+{
+  "statusLine": { "type": "command", "command": "~/.claude/usage-bar.sh" }
+}
+```
+
+The status line shows in the Claude Code terminal. The desktop app (Code tab and Cowork) draws no status line, so there the mod is the only option.
+
 ## Develop
 
 ```
