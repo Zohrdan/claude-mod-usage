@@ -42,6 +42,21 @@ Then add this to `~/.claude/settings.json`:
 }
 ```
 
+### Windows
+
+Use `statusline/usage-bar.ps1` instead. It needs neither bash nor jq and runs on the PowerShell that ships with Windows. Save it as `%USERPROFILE%\.claude\usage-bar.ps1`, then add this to `%USERPROFILE%\.claude\settings.json`:
+
+```json
+{
+  "statusLine": {
+    "type": "command",
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File C:/Users/<you>/.claude/usage-bar.ps1"
+  }
+}
+```
+
+Use Windows Terminal for the colours; the old console window may not show them.
+
 The status line shows in the Claude Code terminal. The desktop app (Code tab and Cowork) draws no status line, so there the mod is the only option.
 
 ## Develop
